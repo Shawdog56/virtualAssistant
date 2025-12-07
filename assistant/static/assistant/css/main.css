@@ -275,6 +275,10 @@ iframe {
 
 }
 
+.bg-custom-main{
+  background-color: #001736 !important;
+}
+
 /*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
