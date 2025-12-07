@@ -247,8 +247,8 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 43px 88px 93px 43px;
+  justify-content: center;
+  padding: 43px 43px 93px 43px;
 }
 
 
@@ -378,7 +378,7 @@ input.input100 {
 }
 
 .input-checkbox100:checked + .label-checkbox100::before {
-  color: #57b846;
+  color: #001736;
 }
 
 /*------------------------------------------------------------------
@@ -391,6 +391,7 @@ input.input100 {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .login100-form-btn {
@@ -402,10 +403,10 @@ input.input100 {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 160px;
+  width: 80%;
   height: 50px;
-  background-color: #57b846;
-  border-radius: 25px;
+  background-color: #001736;
+  border-radius: 5px;
 
   font-family: Poppins-Regular;
   font-size: 16px;
@@ -428,13 +429,13 @@ input.input100 {
 
 @media (max-width: 576px) {
   .login100-form {
-    padding: 43px 15px 57px 117px;
+    padding: 43px 1.5rem 43px 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .login100-form {
-    padding: 43px 15px 57px 15px;
+    padding: 43px 15px 43px 15px;
   }
 
   .label-input100 {

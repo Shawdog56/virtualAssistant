@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-	Inicio de Sesión
+	Recuperar contraseña
 {% endblock %}
 {% block bodycontent %}	
 	<div class="">
@@ -11,48 +11,27 @@
 						Asistente Virtual Huesos
 					</span>
 					<span class="login100-form-title-2">
-						Inicio de Sesión
+						Recuperar contraseña
 					</span>
 				</div>
 
-				<form class="login100-form" method="post">
-					{% csrf_token %}
+				<form class="login100-form validate-form" method="post">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Nombre de usuario requerido">
 						<input class="input100" type="text" name="username" placeholder="Nombre de Usuario o Correo electrónico">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Contraseña requerida">
-						<input class="input100" type="password" name="password" placeholder="Contraseña">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Recuérdame
-							</label>
-						</div>
-
-						<div>
-							<a href="/recoverpasswd/" class="txt1">
-								¿Olvidaste tu contraseña?
-							</a>
-						</div>
-					</div>
-
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Iniciar Sesión
+							Recuperar Contraseña
 						</button>
 					</div>
 					<div>
 						<p>
-							¿No tienes una cuenta?
+							Regresar a
 							<span>
-								<a href="/register/" class="txt1">
-									Regístrate
+								<a href="/login/" class="txt1">
+									Inicio de Sesión
 								</a>
 							</span>
 						</p>

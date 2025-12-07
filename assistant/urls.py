@@ -11,5 +11,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('dashboard/', login_required(views.dashboard), name='dashboard'),
     path('register/', views.register, name='register'),
-    path('pusuas/', views.pusuas, name='pusuas')
+    path('recoverpasswd/', views.recoverpasswd, name='recoverpasswd'),
+    path('pusuas/', views.pusuas, name='pusuas'),
+    path('sidebar/', views.sidebar, name='sidebar')
 ]

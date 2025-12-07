@@ -11,3 +11,9 @@ def pusuas(request):
 
 def register(request):
     return render(request, 'register.html')
+
+def recoverpasswd(request):
+    return render(request,'recoverpasswd.html')
+
+def sidebar(request):
+    return render(request, 'dashboard/sidebar.html')
