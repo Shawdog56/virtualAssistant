@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}
+	Inicio de Sesión
+{% endblock %}
+{% block bodycontent %}	
+	<div class="">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title">
+					<span class="login100-form-title-1">
+						Asistente Virtual Huesos
+					</span>
+					<span class="login100-form-title-2">
+						Registro
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" method="post">
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Nombre de usuario requerido">
+						<input class="input100" type="email" name="email" placeholder="Correo electrónico">
+						<span class="focus-input100"></span>
+					</div>
+                    
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Nombre de usuario requerido">
+						<input class="input100" type="text" name="username" placeholder="Nombre de usuario">
+						<span class="focus-input100"></span>
+					</div>
+                    
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Nombre de usuario requerido">
+						<input class="input100" type="text" name="username" placeholder="Nombre">
+						<span class="focus-input100"></span>
+					</div>
+                    
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Nombre de usuario requerido">
+						<input class="input100" type="text" name="username" placeholder="Apellidos">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Contraseña requerida">
+						<input class="input100" type="password" name="password" placeholder="Ingresa tu contraseña">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Contraseña requerida">
+						<input class="input100" type="password" name="repeatpassword" placeholder="Ingresa tu contraseña">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Registrar
+						</button>
+					</div>
+					<div>
+						<p>
+							¿Ya tienes una cuenta?
+							<span>
+								<a href="/login/" class="txt1">
+									Inicia Sesión
+								</a>
+							</span>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

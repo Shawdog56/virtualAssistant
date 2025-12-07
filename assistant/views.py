@@ -1,0 +1,13 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.template import loader
+# Create your views here.
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+def pusuas(request):
+    return render(request,'pusuas.html')
+
+def register(request):
+    return render(request, 'register.html')
