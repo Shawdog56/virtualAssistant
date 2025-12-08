@@ -279,6 +279,15 @@ iframe {
   background-color: #001736 !important;
 }
 
+.bg-custom-main a p{
+  color: white !important;
+}
+
+.text-bg-custom-primary{
+  background-color: #d6dede !important;
+  color: #001736 !important;
+}
+
 /*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
