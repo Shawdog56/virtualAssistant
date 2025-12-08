@@ -17,3 +17,15 @@ def recoverpasswd(request):
 
 def sidebar(request):
     return render(request, 'layout/sidebar.html')
+
+def musicExplore(request):
+    return render(request, 'music/explore.html')
+
+def musicPrincipal(request):
+    return render(request, 'music/principal.html')
+
+def devicesAdd(request):
+    return render(request, 'devices/add.html')
+
+def devicesManage(request):
+    return render(request, 'devices/manage.html')
