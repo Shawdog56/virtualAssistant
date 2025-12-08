@@ -4,7 +4,7 @@
   <head>
     {% load static %}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Asistente Virtual Huesos | Dashboard</title>
+    <title>Asistente Virtual Huesos | {% block title %}Dashboard{% endblock %}</title>
 
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -207,13 +207,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/dashboard/" class="nav-link">
+                    <a href="/devices/manage/" class="nav-link">
                       <i class="nav-icon bi bi-gear"></i>
                       <p>Configurar dispositivos</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="/devices/add/" class="nav-link">
                       <i class="nav-icon bi bi-plus-circle"></i>
                       <p>Añadir dispositivo</p>
                     </a>
@@ -231,13 +231,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/dashboard/" class="nav-link">
+                    <a href="/music/explore/" class="nav-link">
                       <i class="nav-icon bi bi-binoculars"></i>
                       <p>Explorar</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="/music/principal/" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Principal</p>
                     </a>
