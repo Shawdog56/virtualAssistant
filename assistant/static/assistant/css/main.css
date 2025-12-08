@@ -288,6 +288,10 @@ iframe {
   color: #001736 !important;
 }
 
+div>.card-body ol>li {
+  list-style-type: decimal !important;
+}
+
 /*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
