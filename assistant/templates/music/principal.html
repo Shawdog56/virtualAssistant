@@ -1,4 +1,18 @@
 {% extends 'layout/sidebar.html' %}
+{% load static %}
+
 {% block main %}
-<!-- Implementa tu código html aquí -->
+
+<div class="header">Listado de música</div>
+
+<input type="text" class="search-box" placeholder="Buscar">
+
+<div class="section-title">Selección rápida</div>
+<div class="grid" id="musicGrid"></div>
+
+<div class="section-title">Volver a escuchar</div>
+<div class="grid" id="recentGrid"></div>
+
+<!-- Conexión al JS -->
+<script src="{% static 'js/list_music_p.js' %}"></script>
 {% endblock %}

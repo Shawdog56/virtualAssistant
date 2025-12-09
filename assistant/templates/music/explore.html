@@ -1,4 +1,14 @@
 {% extends 'layout/sidebar.html' %}
 {% block main %}
-<!-- Implementa tu código html aquí -->
+
+<div class="header">Explorar música</div>
+
+<input type="text" class="search-box" placeholder="Buscar artistas, géneros, playlists...">
+
+<div class="section-title">Recomendado para ti</div>
+
+<div class="grid" id="exploreGrid"></div>
+
+<script src="{% static/assistant 'js/list_music_e.js' %}"></script>
+
 {% endblock %}
