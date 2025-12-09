@@ -1,7 +1,7 @@
 {% extends 'layout/sidebar.html' %}
 {% block main %}
 <div class="container-fluid p-4" style="background-color: #f4f6f9;">
-
+    {% load static %}
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="h3 fw-bold text-dark">Manejo de dispositivos</h2>
         
@@ -48,7 +48,7 @@
                     <tr>
                         <td class="ps-4">
                             <div class="d-flex align-items-center">
-                                <img src="../../../static/images/Dispositivos/foco.jpg" class="rounded me-3" alt="foco" width="40">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/foco.jpg' %}" class="rounded me-3" alt="foco" width="40">
                                 <span class="fw-semibold text-secondary">Foco inteligente</span>
                             </div>
                         </td>
@@ -64,7 +64,7 @@
                     <tr>
                         <td class="ps-4">
                             <div class="d-flex align-items-center">
-                                <img src="../../../static/images/Dispositivos/termostato.jpg" class="rounded me-3" alt="termostato" width="40">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/termostato.jpg' %}" class="rounded me-3" alt="termostato" width="40">
                                 <span class="fw-semibold text-secondary">Termóstato</span>
                             </div>
                         </td>
@@ -80,7 +80,7 @@
                     <tr>
                         <td class="ps-4">
                             <div class="d-flex align-items-center">
-                                <img src="../../../static/images/Dispositivos/bocina.jpg" class="rounded me-3" alt="camara" width="40">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/bocina.jpg' %}" class="rounded me-3" alt="camara" width="40">
                                 <span class="fw-semibold text-secondary">Cámara de vigilancia</span>
                             </div>
                         </td>
