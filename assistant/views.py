@@ -29,3 +29,6 @@ def devicesAdd(request):
 
 def devicesManage(request):
     return render(request, 'devices/manage.html')
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)

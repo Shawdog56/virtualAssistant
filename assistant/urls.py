@@ -19,3 +19,5 @@ urlpatterns = [
     path('pusuas/', views.pusuas, name='pusuas'),
     path('sidebar/', views.sidebar, name='sidebar'),
 ]
+
+handler404 = 'assistant.views.custom_404'

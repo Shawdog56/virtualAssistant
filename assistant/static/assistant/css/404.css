@@ -1,0 +1,140 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 800px;
+  width: 60%;
+  line-height: 1.1;
+
+  /* --- GRID SETUP --- */
+  display: grid;
+  /* Two columns: 140px for image, the rest for text */
+  grid-template-columns: 140px auto; 
+  /* Rows adapt to content size automatically */
+  grid-auto-rows: auto; 
+  gap: 20px;
+  align-items: center; /* Vertically center content */
+}
+
+/* --- THE IMAGE (EMOJI) --- */
+.notfound .notfound-404 {
+  grid-column: 1 / 2;
+  /* Span 4 rows to cover h1, h2, p, and a */
+  grid-row: 1 / span 4; 
+  
+  position: relative; /* Necessary for the :before circle to position correctly */
+  width: 140px;
+  height: 140px;
+  
+  background-image: url('../assets/img/emoji.png');
+  background-size: cover;
+  background-position: center;
+  /* Ensure it stays on top of the circle */
+  z-index: -1; 
+}
+
+
+/* --- TEXT ELEMENTS --- */
+/* Force all text into the second column */
+.notfound h1, 
+.notfound h2, 
+.notfound p, 
+.notfound a {
+  grid-column: 2 / 3;
+}
+
+.notfound h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #151723;
+  text-transform: uppercase;
+}
+
+.notfound h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #151723;
+}
+
+.notfound p {
+  font-family: 'Nunito', sans-serif;
+  color: #999fa5;
+  font-weight: 400;
+  margin: 10px 0; /* Add a little breathing room */
+}
+
+.notfound a {
+  font-family: 'Nunito', sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #388dbc;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media only screen and (max-width: 767px) {
+  .notfound {
+    /* Stack everything in one column */
+    grid-template-columns: 1fr;
+    gap: 5px;
+
+    width: 80%;
+
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    /* Center items in the grid column */
+    justify-items: center; 
+  }
+
+  .notfound .notfound-404 {
+    /* Reset span so it doesn't overlap text in mobile stack */
+    grid-row: auto; 
+    grid-column: 1;
+    margin-bottom: 20px;
+    
+    width: 110px;
+    height: 110px;
+  }
+
+  /* Reset text to column 1 */
+  .notfound h1, 
+  .notfound h2, 
+  .notfound p, 
+  .notfound a {
+    grid-column: 1;
+  }
+  
+  .notfound h1 {
+    font-size: 45px; /* Smaller font on mobile */
+  }
+}

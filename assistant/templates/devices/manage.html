@@ -1,4 +1,110 @@
 {% extends 'layout/sidebar.html' %}
 {% block main %}
-<!-- Implementa tu código html aquí -->
+<div class="container-fluid p-4" style="background-color: #f4f6f9;">
+    {% load static %}
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h3 fw-bold text-dark">Manejo de dispositivos</h2>
+        
+        <div class="rounded-circle bg-light p-2 shadow-sm">
+            <i class="bi bi-person-fill fs-5"></i>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div class="input-group shadow-sm" style="max-width: 350px;">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control border-start-0 ps-0" placeholder="Buscar">
+        </div>
+
+        <div class="d-flex gap-3 align-items-center">
+            <button class="btn btn-link text-dark text-decoration-none fw-semibold">
+                <i class="bi bi-arrow-down-up me-1"></i> Ordenar A-Z
+            </button>
+            <button class="btn btn-link text-dark text-decoration-none fw-semibold">
+                <i class="bi bi-funnel me-1"></i> Filtrar
+            </button>
+            <button class="btn btn-link text-dark text-decoration-none fw-semibold">
+                <i class="bi bi-box-arrow-up me-1"></i> Exportar
+            </button>
+            <a href="#" class="btn btn-dark px-4 rounded-3">
+                <i class="bi bi-plus-lg me-1"></i> Añadir
+            </a>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead style="background-color: #0d1b2a; color: white;">
+                    <tr>
+                        <th class="py-3 ps-4">Nombre del dispositivo</th>
+                        <th class="py-3">ID del dispositivo</th>
+                        <th class="py-3">Métrica clave</th>
+                        <th class="py-3 text-center">Estatus</th>
+                        <th class="py-3 text-center pe-4">Acción</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/foco.jpg' %}" class="rounded me-3" alt="foco" width="40">
+                                <span class="fw-semibold text-secondary">Foco inteligente</span>
+                            </div>
+                        </td>
+                        <td class="text-secondary">BULB-105</td>
+                        <td class="text-secondary">Brillo: 80%</td>
+                        <td class="text-center"><span class="badge bg-success bg-opacity-75 px-3 py-2 rounded-3">Óptimo</span></td>
+                        <td class="text-center pe-4">
+                            <button class="btn btn-link text-secondary p-0 me-2"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-link text-secondary p-0"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/termostato.jpg' %}" class="rounded me-3" alt="termostato" width="40">
+                                <span class="fw-semibold text-secondary">Termóstato</span>
+                            </div>
+                        </td>
+                        <td class="text-secondary">TH-3002</td>
+                        <td class="text-secondary">Temperatura: 24°C</td>
+                        <td class="text-center"><span class="badge bg-danger px-3 py-2 rounded-3">Crítico</span></td>
+                        <td class="text-center pe-4">
+                            <button class="btn btn-link text-secondary p-0 me-2"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-link text-secondary p-0"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'assistant/assets/img/Dispositivos/bocina.jpg' %}" class="rounded me-3" alt="camara" width="40">
+                                <span class="fw-semibold text-secondary">Cámara de vigilancia</span>
+                            </div>
+                        </td>
+                        <td class="text-secondary">SC-6001</td>
+                        <td class="text-secondary">Batería: 57%</td>
+                        <td class="text-center"><span class="badge bg-warning text-white px-3 py-2 rounded-3">Precaución</span></td>
+                        <td class="text-center pe-4">
+                            <button class="btn btn-link text-secondary p-0 me-2"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-link text-secondary p-0"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    
+                    </tbody>
+            </table>
+        </div>
+        
+        <div class="card-footer bg-white border-0 py-3 d-flex justify-content-end align-items-center">
+            <span class="text-muted small me-3">Columnas por página: 1 <i class="bi bi-caret-down-fill ms-1"></i></span>
+            <span class="text-muted small me-3">6 de 10</span>
+            <div class="btn-group">
+                <button class="btn btn-light btn-sm rounded-start"><i class="bi bi-chevron-left"></i></button>
+                <button class="btn btn-light btn-sm rounded-end"><i class="bi bi-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
