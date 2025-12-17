@@ -1,5 +1,7 @@
 venv/
 .env
-*.txt
 __pycache__/
+
+*.txt
 *.sqlite3
+*.sql
