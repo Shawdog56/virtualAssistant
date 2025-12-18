@@ -122,7 +122,13 @@
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">Arturo Diano Segundo</span>
+                <span class="d-none d-md-inline">
+                  {% if fname and fname != " " %}
+                      {{ fname }}
+                  {% else %}
+                      Arturo Diano Segundo
+                  {% endif %}
+                </span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end bg-body-primary">
                 <!--begin::User Image-->
@@ -133,8 +139,18 @@
                     alt="User Image"
                   />
                   <p>
-                    Arturo Diano Segundo
-                    <small>Miembro desde Noviembre 2023</small>
+                    {% if fname and fname != " " %}
+                      {{ fname }}
+                    {% else %}
+                      Arturo Diano Segundo
+                    {% endif %}
+                    <small>
+                    {% if joined and joined != "" %}  
+                      Miembro desde {{ joined }}
+                    {% else %}
+                      Miembro desde Enero. 2024
+                    {% endif %}
+                    </small>
                   </p>
                 </li>
                 <!--end::User Image-->

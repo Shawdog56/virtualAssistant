@@ -1,16 +1,53 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib import messages
+
+from datetime import datetime
+from assistant.forms import RegisterForm
+
+
 # Create your views here.
 
 def dashboard(request):
-    return render(request, 'user/dashboard.html')
+    user = request.user
+    return render(
+        request, 
+        'user/dashboard.html',
+        {
+            'username': user.username,
+            'fname': f"{user.first_name} {user.last_name}",
+            'joined': user.date_joined.date()
+        }
+    )
 
 def pusuas(request):
     return render(request,'pusuas.html')
 
 def register(request):
-    return render(request, 'register.html')
+    if request.method == "POST":
+        try:
+            form = RegisterForm(request.POST)
+            print(form)
+            if form.is_valid():
+                user = form.save(commit=False)
+                user.set_password(form.cleaned_data["password1"])
+                user.save()
+                messages.success(request, "Usuario registrado correctamente")
+                return redirect("/login/")
+        except Exception as e:
+            print(e)
+            form = RegisterForm()
+    else:
+        form = RegisterForm()
+
+    return render(
+        request, 
+        'register.html',
+        {
+            "form": form
+        }
+        )
 
 def recoverpasswd(request):
     return render(request,'recoverpasswd.html')

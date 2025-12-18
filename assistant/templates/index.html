@@ -7,6 +7,11 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-form-title">
+					{% for message in messages %}
+						<div>
+							<p>{{ message }}</p>
+						</div>
+					{% endfor %}
 					<span class="login100-form-title-1">
 						Asistente Virtual Huesos
 					</span>
