@@ -1,0 +1,92 @@
+[
+    {
+        "model": "assistant.catcommandtype",
+        "fields":{
+            "name":"Reproducir Música"
+        }
+    },
+    {
+        "model": "assistant.catcommandtype",
+        "fields":{
+            "name": "consultar dispositivo"
+        }
+    },
+    {
+        "model": "assistant.cattopictype",
+        "fields":{
+            "name": "pub"
+        }
+    },
+    {
+        "model": "assistant.cattopictype",
+        "fields":{
+            "name": "sub"
+        }
+    },
+    {
+        "model": "assistant.cattopictype",
+        "fields":{
+            "name": "both"
+        }
+    },
+    {
+        "model": "assistant.catdevicetype",
+        "fields":{
+            "name": "Asistente"
+        }
+    },
+    {
+        "model": "assistant.catdevicetype",
+        "fields":{
+            "name": "circuito de apertura y cierre"
+        }
+    },
+    {
+        "model": "assistant.catdevicetype",
+        "fields":{
+            "name": "circuito analógico"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "exterior"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "cocina"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "recamara"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "baño"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "sala"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "comedor"
+        }
+    },
+    {
+        "model": "assistant.catubicationdevicetype",
+        "fields":{
+            "name": "garage"
+        }
+    }
+]

@@ -6,7 +6,8 @@ class EntSettingsAccount(models.Model):
     imgPath = models.CharField(max_length=255, blank=True, null=True)
     userId = models.OneToOneField(
         User, 
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        unique=True
     )
     
 
