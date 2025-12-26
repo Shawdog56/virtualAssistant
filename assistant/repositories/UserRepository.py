@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 
 class UserRepository:
     @staticmethod
-    def get_by_id(user_id):
+    def get_by_id(user_id) -> User:
         return User.objects.filter(id=user_id).first()
     
     @staticmethod

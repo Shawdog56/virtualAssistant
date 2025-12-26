@@ -16,16 +16,6 @@ class CatCommandType(models.Model):
     name = models.CharField(max_length=100, null=False, unique=True)
 
 
-class EntExecutedCommand(models.Model):
-    date = models.DateTimeField(auto_now_add=True)
-    commandType = models.ForeignKey(
-        CatCommandType,
-        on_delete=models.CASCADE
-    )
-    userId = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE
-    )
 
 
 ## Topics
@@ -77,3 +67,18 @@ class DeviceActivityLog(models.Model):
         on_delete=models.CASCADE
     )
 
+
+class EntExecutedCommand(models.Model):
+    date = models.DateTimeField(auto_now_add=True)
+    commandType = models.ForeignKey(
+        CatCommandType,
+        on_delete=models.CASCADE
+    )
+    userId = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
+    deviceId = models.ForeignKey(
+        EntDevice,
+        on_delete=models.CASCADE
+    )
