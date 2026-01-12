@@ -50,7 +50,34 @@ El sistema se basa en un modelo de **Computación en el Borde (Edge Computing)**
 
 Sigue estos pasos para desplegar el entorno de desarrollo localmente:
 
-### 1. Clonar el repositorio
+### Clonar el repositorio
 ```bash
 git clone [https://github.com/Shawdog56/virtualAssistant.git](https://github.com/Shawdog56/virtualAssistant.git)
 cd virtualAssistant
+```
+
+### Archivo .env
+```bash
+SECRET_KEY=TU-LLAVE-SEGURA
+
+# Configuración de la base de datos
+DB=BD
+USER=USUARIO
+PASSWORD=CONTRASENHA
+HOST=HOST
+PORT=PORT
+ENGINE=ENGINE
+
+# Configuración del servicio de email
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST=EHOST
+EMAIL_PORT=EPORT
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER=EHOST-USER
+EMAIL_HOST_PASSWORD=EPASSWORD # No spaces
+
+# Localhost con puerto
+LOCALHOST="http://localhost:8000"
+# Aquí va la url de tu servidor
+SERVER="192.168.137.123"
+```
