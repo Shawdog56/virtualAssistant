@@ -1,4 +1,4 @@
-# 🦴 Asistente Huesos: Orquestador Universal IoT
+# Asistente Huesos: Orquestador Universal IoT
 
 [![Licencia](https://img.shields.io/badge/Licencia-Apache--2.0-blue.svg)](LICENSE)
 [![Estado](https://img.shields.io/badge/Status-Finalizado-success)](https://github.com/Shawdog56/virtualAssistant)
@@ -10,7 +10,7 @@
 
 ---
 
-## 🚀 Características Principales
+## Características Principales
 
 * **Arquitectura Abierta:** Diseñado para evitar las "islas tecnológicas", permitiendo la integración de hardware de diferentes fabricantes sin obsolescencia programada.
 * **Procesamiento de Lenguaje Natural (PLN):** Motor de interpretación basado en expresiones regulares para el control preciso de dispositivos mediante comandos de voz.
@@ -20,7 +20,7 @@
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 El sistema se basa en un modelo de **Computación en el Borde (Edge Computing)** organizado en cuatro capas:
 
@@ -31,7 +31,7 @@ El sistema se basa en un modelo de **Computación en el Borde (Edge Computing)**
 
 ---
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 ### Software
 * **Backend:** Python 3.11+ / Django 5.0+
@@ -46,7 +46,7 @@ El sistema se basa en un modelo de **Computación en el Borde (Edge Computing)**
 
 ---
 
-## 📦 Instalación y Configuración
+## Instalación y Configuración
 
 Sigue estos pasos para desplegar el entorno de desarrollo localmente:
 
